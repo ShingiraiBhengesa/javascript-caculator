@@ -17,7 +17,7 @@ function printOutput(num){
 }
 function getFormattedNumber(num){
 	if(num=="-"){
-		return "";
+		return ;
 	}
 	var n = Number(num);
 	var value = n.toLocaleString("en");
@@ -42,7 +42,7 @@ for(var i =0;i<operator.length;i++){
 		}
 		else{
 			var output=getOutput();
-			var history=getHistory();
+			var history=getHistory;
 			if(output==""&&history!=""){
 				if(isNaN(history[history.length-1])){
 					history= history.substr(0,history.length-1);
@@ -67,7 +67,7 @@ for(var i =0;i<operator.length;i++){
 	});
 }
 var number = document.getElementsByClassName("number");
-for(var i =0;i<number.length;i++){
+for(var i =0;i<number.length;i){
 	number[i].addEventListener('click',function(){
 		var output=reverseNumberFormat(getOutput());
 		if(output!=NaN){ //if output is a number
